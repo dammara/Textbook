@@ -1,8 +1,10 @@
-# This is the Drvier prog for the Textbook
+# This is the Driver prog for the Textbook
 
 from Person import Person
 from Texbook import Textbook
 import time
+
+# creates a function for the program
 
 
 def the_book():
@@ -21,7 +23,7 @@ def the_book():
     publisher = input("What company published this textbook? >>>")
     year = input("What year was this book published? >>>")
     quantity = int(input("How many books are in stock? >>>"))
-    while quantity < 5:
+    while quantity < 5:  # sets a min at 5, the user can 'order' more
         print(f"Books in stock = {quantity}")
         print("The stock is too low. We need more books!")
         more = int(input("How many more books do we need? >>>"))
@@ -34,7 +36,7 @@ def the_book():
             print(f"Books in stock = {quantity}")
         elif quantity > 6:
             break
-    while quantity >= 15:
+    while quantity >= 15:  #  Sets a max at 15 books
         print("I think we ordered too many textbooks. Let's get rid of some.")
         input()
         print("Trashing textbooks, please wait...")
@@ -49,15 +51,14 @@ def the_book():
     book1 = Textbook(first, last, age, title, edition, isbn, publisher, year, quantity, price)
     #  Here we will get the second book's information
 
-
     print("Okay, just help me with one more book and you're free to go.")
-    first2 = str(input("What is the author's first name? >>>"))
-    last2 = str(input("What is the author's last name? >>>"))
-    age2 = str(input("How old is the author? >>>"))
-    # author2 = str(Person(first2, last2, age2))
+    input()
+    first2 = str(input("What is the 2nd author's first name? >>>"))
+    last2 = str(input("What is their last name? >>>"))
+    age2 = str(input("How old are they? >>>"))
 
-    print(f"So, your book was written by {first2} {last2}, who is {age2} years old.")
-    print("\n Please tell me more info about the book, so I can find it.")
+    print(f"So, the 2nd book was written by {first2} {last2}, who is {age2} years old.")
+    print("\nTell me more info about the book, so I can find it.")
 
     input("\n")
     title2 = input("Please enter the title of the book you're looking for. >>>")
@@ -96,7 +97,7 @@ def the_book():
     time.sleep(2)
     print("I found the books you're looking for!")
     input("Press ENTER to view the information.")
-    print(f"""
+    print(f"""  
     {title}, by {first} {last}.
     Edition #{edition}
     ISBN - {isbn}
@@ -109,6 +110,7 @@ def the_book():
     Published by {publisher2} in {year2}.
     We have {quantity2} in stock, for a price of ${price2} per textbook.""")
 
+# exe
 print("""
 Welcome to the Library, LOSER.
 Today, you are starting your new job as a librarian.""")

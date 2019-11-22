@@ -20,8 +20,5 @@ class Textbook():
         self.quantity = int(quantity)
         self.price = int(price)
 
-    def warning(self):
-        while self.quantity < 5:
-            return "The stock is too low, sorry."
-            quantity = input("How many books are in stock? >>>")
+
 
