@@ -11,7 +11,7 @@ def the_book():
     first = input("What is the author's first name? >>>")
     last = input("What is the author's last name? >>>")
     age = input("How old is the author? >>>")
-    # author = str(Person(first, last, age))
+
 
     print(f"So, your book was written by {first} {last}, who is {age} years old.")
     print("\n Please tell me more info about the book, so I can find it.")
@@ -23,7 +23,7 @@ def the_book():
     publisher = input("What company published this textbook? >>>")
     year = input("What year was this book published? >>>")
     quantity = int(input("How many books are in stock? >>>"))
-    while quantity < 5:  # sets a min at 5, the user can 'order' more
+    while quantity < 5:                                                     # sets a min at 5, the user can 'order' more
         print(f"Books in stock = {quantity}")
         print("The stock is too low. We need more books!")
         more = int(input("How many more books do we need? >>>"))
@@ -51,7 +51,7 @@ def the_book():
     book1 = Textbook(first, last, age, title, edition, isbn, publisher, year, quantity, price)
     #  Here we will get the second book's information
 
-    print("Okay, just help me with one more book and you're free to go.")
+    print("Okay, just help me with one more book and you're free to go.")                     # START SECOND BOOK SEARCH
     input()
     first2 = str(input("What is the 2nd author's first name? >>>"))
     last2 = str(input("What is their last name? >>>"))
@@ -92,7 +92,7 @@ def the_book():
     price2 = input("How much does the book cost? >>>$")
     book2 = Textbook(first2, last2, age2, title2, edition2, isbn2, publisher2, year2, quantity2, price2)
 
-    #  Here we will display the book info
+                                                                                   #  Here we will display the book info
     print("Compiling data, please wait...")
     time.sleep(2)
     print("I found the books you're looking for!")
@@ -110,7 +110,7 @@ def the_book():
     Published by {publisher2} in {year2}.
     We have {quantity2} in stock, for a price of ${price2} per textbook.""")
 
-# exe
+                                                                                                                   # exe
 print("""
 Welcome to the Library, LOSER.
 Today, you are starting your new job as a librarian.""")
