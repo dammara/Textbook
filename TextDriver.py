@@ -36,7 +36,7 @@ def the_book():
             print(f"Books in stock = {quantity}")
         elif quantity > 6:
             break
-    while quantity >= 15:  #  Sets a max at 15 books
+    while quantity >= 15:  # Sets a max at 15 books
         print("I think we ordered too many textbooks. Let's get rid of some.")
         input()
         print("Trashing textbooks, please wait...")
